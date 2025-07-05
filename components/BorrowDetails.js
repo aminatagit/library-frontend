@@ -50,7 +50,7 @@ export default function BorrowDetails({ borrow, user, onReturn }) {
     if (!window.confirm('Confirmer la remise du livre ?')) return;
     setReturning(true);
     try {
-      await axios.delete(`http://localhost:4000/api/borrows/return/${borrow.id}`, {
+      await axios.post(`http://localhost:4000/api/borrows/return/${borrow.id}`, {}, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       if (onReturn) onReturn(borrow.id);
