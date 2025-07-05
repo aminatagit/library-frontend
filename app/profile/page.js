@@ -48,7 +48,7 @@ export default function ProfilePage() {
       <div className="card bg-base-100 shadow-xl mb-6">
         <div className="card-body">
           <h2 className="card-title text-libraryPrimary">Profil</h2>
-          <p><strong>Nom d'utilisateur :</strong> {user.username}</p>
+          <p><strong>Nom d{"'"}utilisateur :</strong> {user.username}</p>
           <p><strong>Email :</strong> {user.email}</p>
           <p><strong>Rôle :</strong> {user.role === 'admin' ? 'Administrateur' : 'Utilisateur'}</p>
         </div>
@@ -57,14 +57,14 @@ export default function ProfilePage() {
         <div className="card-body">
           <h2 className="card-title text-libraryPrimary">Mes emprunts</h2>
           {borrows.length === 0 ? (
-            <p>Vous n'avez emprunté aucun livre.</p>
+            <p>Vous n{"'"}avez emprunté aucun livre.</p>
           ) : (
             <div className="overflow-x-auto">
               <table className="table w-full text-base">
                 <thead>
                   <tr>
                     <th>Titre</th>
-                    <th>Date d'emprunt</th>
+                    <th>Date d&apos;emprunt</th>
                     <th>Date de retour</th>
                     <th>Mon commentaire</th>
                     <th>Ma note</th>

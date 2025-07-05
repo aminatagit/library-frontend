@@ -145,7 +145,7 @@ export default function BookDetails() {
           </>
         )}
         <button className="btn btn-ghost mt-4" onClick={() => router.push('/')}> 
-          Retour à l'accueil
+          Retour &agrave; l&apos;accueil
         </button>
       </div>
     </div>

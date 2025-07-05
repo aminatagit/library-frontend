@@ -25,7 +25,7 @@ export default function RegisterForm() {
       router.push('/login');
       alert('Inscription réussie !');
     } catch (err) {
-      alert("Échec de l'inscription : " + err.message);
+      alert("Échec de l’inscription : " + err.message);
     }
   };
 
@@ -35,7 +35,7 @@ export default function RegisterForm() {
         <h2 className="card-title text-libraryPrimary">Inscription</h2>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Nom d'utilisateur</span>
+            <span className="label-text">Nom d{"'"}utilisateur</span>
           </label>
           <input
             type="text"

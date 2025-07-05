@@ -1,8 +1,11 @@
 # Frontend Dockerfile
 FROM node:18-alpine
 WORKDIR /app
+
 COPY package*.json ./
-RUN npm install --production
+COPY tailwind.config.js postcss.config.js ./
+RUN npm install
 COPY . .
 EXPOSE 3000
-CMD ["npm", "run", "dev"]
+RUN npm run build
+CMD ["npm", "start"]

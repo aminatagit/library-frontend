@@ -32,7 +32,7 @@ export default function AdminUsersPage() {
 
   const handleAddUser = async () => {
     if (!newUser.username || !newUser.email || !newUser.password || !newUser.role) {
-      setMessage("Veuillez remplir tous les champs (nom d'utilisateur, email, mot de passe, rôle).");
+      setMessage("Veuillez remplir tous les champs (nom d’utilisateur, email, mot de passe, rôle).");
       return;
     }
     try {
@@ -46,10 +46,10 @@ export default function AdminUsersPage() {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setNewUser({ username: '', email: '', password: '', role: 'student', receive_late_email: false });
-      setMessage("L'utilisateur a bien été ajouté.");
+      setMessage("L’utilisateur a bien été ajouté.");
       fetchUsers();
     } catch (err) {
-      setMessage("Erreur lors de l'ajout de l'utilisateur. Vérifiez que l'email n'existe pas déjà et que tous les champs sont valides.");
+      setMessage("Erreur lors de l’ajout de l’utilisateur. Vérifiez que l’email n’existe pas déjà et que tous les champs sont valides.");
     }
   };
 
@@ -63,7 +63,7 @@ export default function AdminUsersPage() {
       await axios.delete(`http://localhost:4000/api/admin/users/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
-      setMessage("L'utilisateur a bien été supprimé.");
+      setMessage("L’utilisateur a bien été supprimé.");
       fetchUsers();
     } catch (err) {
       setMessage("Erreur lors de la suppression.");
@@ -91,7 +91,7 @@ export default function AdminUsersPage() {
       setMessage("L'utilisateur a bien été modifié.");
       fetchUsers();
     } catch (err) {
-      setMessage("Erreur lors de la modification. Vérifiez que l'email est valide et unique.");
+      setMessage("Erreur lors de la modification. Vérifiez que l’email est valide et unique.");
     }
   };
 
@@ -110,7 +110,7 @@ export default function AdminUsersPage() {
         <div className="flex-1 flex flex-col md:flex-row gap-2">
           <input
             type="text"
-            placeholder="Nom d'utilisateur"
+            placeholder="Nom d’utilisateur"
             className="input input-bordered w-full md:w-auto"
             value={newUser.username}
             onChange={e => setNewUser({ ...newUser, username: e.target.value })}
@@ -200,13 +200,13 @@ export default function AdminUsersPage() {
       {editUser && (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded shadow-lg w-full max-w-md">
-            <h3 className="font-bold mb-2">Modifier l'utilisateur</h3>
+            <h3 className="font-bold mb-2">Modifier l&apos;utilisateur</h3>
             <input
               type="text"
               className="input input-bordered w-full mb-2"
               value={editUser.username}
               onChange={e => setEditUser({ ...editUser, username: e.target.value })}
-              placeholder="Nom d'utilisateur"
+              placeholder="Nom d&apos;utilisateur"
             />
             <input
               type="email"

@@ -36,7 +36,7 @@ export default function ForgotPasswordForm() {
         </div>
         <div className="card-actions justify-end mt-4">
           <button className="btn btn-primary" onClick={handleForgotPassword}>
-            Envoyer l'email de réinitialisation
+            Envoyer l{"'"}email de réinitialisation
           </button>
           <button className="btn btn-ghost" onClick={() => router.push('/login')}>
             Retour à la connexion
